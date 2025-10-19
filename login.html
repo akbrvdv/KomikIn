@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - KomikIn</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">KomikIn</a>
+            <div class="nav-links">
+                <a href="index.html#featured">Browse</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </nav>
+    <main class="form-page">
+        <div class="form-container">
+            <h2>Login ke KomikIn</h2>
+            <form action="dashboard.html" method="GET">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="kamu@contoh.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Lupa Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <div class="form-footer">
+                <p>Belum punya akun? <a href="register.html">Register di sini</a></p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KomikIn. Dibuat dengan HTML & CSS.</p>
+        </div>
+    </footer>
+</body>
+</html>

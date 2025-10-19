@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root { --bg-dark: #0d1117; --bg-secondary: #161b22; --primary-blue: #3b82f6; --hover-blue: #2563eb; --text-light: #e6edf3; --text-muted: #8b949e; --border-color: #30363d; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* --- Gaya yang diulang (Navbar, Tombol, Footer) --- */
+.navbar { padding: 20px 0; position: fixed; width: 100%; background-color: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.navbar .logo { font-size: 24px; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
+.navbar .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
+.navbar .nav-links a:hover { color: var(--primary-blue); }
+.btn { padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; }
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-primary:hover { background-color: var(--hover-blue); }
+.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+
+/* --- Gaya Khusus Halaman Dashboard --- */
+.dashboard-page { padding-top: 80px; } /* Memberi ruang di bawah navbar */
+.dashboard-header { background-color: var(--bg-secondary); padding: 50px 0; text-align: center; border-bottom: 1px solid var(--border-color); }
+.dashboard-header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.dashboard-header p { font-size: 1.1rem; color: var(--text-muted); }
+.content-section { padding: 60px 0; }
+.content-section h2 { font-size: 2.2rem; margin-bottom: 40px; border-left: 4px solid var(--primary-blue); padding-left: 15px; }
+
+/* Gaya Kartu Komik (mirip seperti di index.css) */
+.comic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; }
+.comic-card { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; }
+.comic-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+.comic-card img { width: 100%; height: auto; display: block; }
+.comic-card-body { padding: 15px; }
+.comic-card-body h3 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.comic-card-body p { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Gaya Progress Bar */
+.progress-bar { width: 100%; background-color: var(--border-color); height: 5px; }
+.progress { background-color: var(--primary-blue); height: 100%; border-radius: 0 2px 2px 0; }

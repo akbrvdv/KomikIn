@@ -1,0 +1,44 @@
+/* Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variabel Warna Tema */
+:root {
+    --bg-dark: #0d1117;
+    --bg-secondary: #161b22;
+    --primary-blue: #3b82f6;
+    --hover-blue: #2563eb;
+    --text-light: #e6edf3;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+}
+
+/* Reset dan Gaya Dasar Body */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* --- Gaya yang diulang (Navbar, Tombol, Footer) --- */
+.navbar { padding: 20px 0; position: fixed; width: 100%; background-color: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.navbar .logo { font-size: 24px; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
+.navbar .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
+.navbar .nav-links a:hover { color: var(--primary-blue); }
+.btn { padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; }
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-primary:hover { background-color: var(--hover-blue); }
+.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+
+/* --- Gaya Khusus Halaman Utama --- */
+.hero { height: 100vh; display: flex; align-items: center; text-align: center; padding-top: 60px; }
+.hero h1 { font-size: 4rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+.hero h1 span { color: var(--primary-blue); }
+.hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; }
+.featured { padding: 80px 0; background-color: var(--bg-secondary); }
+.featured h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+.comic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; }
+.comic-card { background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.comic-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+.comic-card img { width: 100%; height: auto; display: block; }
+.comic-card-body { padding: 15px; }
+.comic-card-body h3 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.comic-card-body p { font-size: 0.8rem; color: var(--text-muted); }

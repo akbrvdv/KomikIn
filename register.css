@@ -1,0 +1,26 @@
+/* ISI DARI FILE INI SAMA PERSIS DENGAN login.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root { --bg-dark: #0d1117; --bg-secondary: #161b22; --primary-blue: #3b82f6; --hover-blue: #2563eb; --text-light: #e6edf3; --text-muted: #8b949e; --border-color: #30363d; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.navbar { padding: 20px 0; position: fixed; width: 100%; background-color: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.navbar .logo { font-size: 24px; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
+.navbar .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
+.navbar .nav-links a:hover { color: var(--primary-blue); }
+.btn { padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-primary:hover { background-color: var(--hover-blue); }
+.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+.form-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 120px 20px 60px 20px; }
+.form-container { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 50px 40px; width: 100%; max-width: 420px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); }
+.form-container h2 { text-align: center; margin-bottom: 35px; font-size: 2.2rem; color: var(--text-light); }
+.form-group { margin-bottom: 25px; }
+.form-group label { display: block; margin-bottom: 10px; font-size: 0.95rem; font-weight: 600; color: var(--text-muted); }
+.form-group input { width: 100%; padding: 14px 15px; background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-light); font-size: 1.05rem; transition: border-color 0.3s, box-shadow 0.3s; }
+.form-group input:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); }
+.btn-block { width: 100%; padding: 14px; font-size: 1.05rem; margin-top: 20px; }
+.form-footer { text-align: center; margin-top: 30px; font-size: 0.95rem; color: var(--text-muted); }
+.form-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
+.form-footer a:hover { text-decoration: underline; }
