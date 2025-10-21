@@ -1,0 +1,130 @@
+/* -- STRUKTUR UTAMA HALAMAN PROFIL -- */
+main.profile-page {
+    padding-top: 0; /* Hapus padding atas agar banner menempel */
+}
+
+/* -- HEADER PROFIL (BANNER & AVATAR) -- */
+.profile-header {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.profile-banner {
+    width: 100%;
+    height: 250px;
+}
+.profile-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-avatar-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 0 5%; /* Samakan dengan padding .container */
+    margin-top: -75px; /* Angkat avatar agar menimpa banner */
+    position: relative;
+}
+.profile-avatar {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--bg-dark);
+}
+.profile-avatar #profile-initial {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+.profile-user-info {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.profile-user-info h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+.btn-edit-profile {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 99px; /* Pill shape */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-edit-profile:hover {
+    background-color: var(--border-color);
+}
+
+/* -- STATISTIK PENGGUNA -- */
+.profile-stats {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* -- NAVIGASI TAB -- */
+.profile-tabs {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+.tab-link {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+.tab-link.active {
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+/* -- KONTEN TAB -- */
+.tab-content {
+    display: none; /* Sembunyikan semua konten tab secara default */
+}
+.tab-content.active {
+    display: block; /* Tampilkan hanya konten tab yang aktif */
+}
+.btn-logout {
+    background-color: #dc3545; color: white; border: none;
+    padding: 10px 20px; border-radius: 6px; font-weight: bold;
+    cursor: pointer; margin-top: 20px; transition: background-color 0.2s;
+}
+.btn-logout:hover {
+    background-color: #c82333;
+}

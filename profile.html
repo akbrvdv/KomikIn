@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - KomikIn</title>
+    <link rel="stylesheet" href="dashboard.css"> <link rel="stylesheet" href="profile.css">   </head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="dashboard.html" class="logo">KomikIn</a>
+                <div class="nav-links">
+                    <a href="dashboard.html">Home</a>
+                    <a href="#">Explore</a>
+                    <a href="#">Library</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Cari Komik">
+                    <span class="search-shortcut">Ctrl + K</span>
+                </div>
+                <a href="profile.html" id="profile-icon" class="profile-icon active"></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <header class="profile-header">
+            <div class="profile-banner">
+                <img src="https://via.placeholder.com/1200x300/161b22/8b949e?text=Banner" alt="User Banner">
+            </div>
+            <div class="profile-avatar-container">
+                <div class="profile-avatar">
+                    <span id="profile-initial">U</span>
+                </div>
+                <div class="profile-user-info">
+                    <h1 id="profile-username">Nama Pengguna</h1>
+                    <button class="btn-edit-profile">Edit Profile</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="favorites-count">0</span>
+                    <span class="stat-label">Komik Difavoritkan</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">0</span>
+                    <span class="stat-label">Chapter Dibaca</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="join-date">Oktober 2025</span>
+                    <span class="stat-label">Bergabung</span>
+                </div>
+            </section>
+
+            <nav class="profile-tabs">
+                <button class="tab-link active" data-tab="tab-favorites">Favorit</button>
+                <button class="tab-link" data-tab="tab-history">Riwayat Baca</button>
+                <button class="tab-link" data-tab="tab-settings">Pengaturan</button>
+            </nav>
+
+            <div id="tab-favorites" class="tab-content active">
+                <div class="comic-grid" id="favorites-grid">
+                    <p>Memuat komik favorit...</p>
+                </div>
+            </div>
+
+            <div id="tab-history" class="tab-content">
+                <h2>Riwayat Baca</h2>
+                <p>Fitur ini akan segera tersedia.</p>
+            </div>
+            
+            <div id="tab-settings" class="tab-content">
+                <h2>Pengaturan Akun</h2>
+                <p>Fitur ini akan segera tersedia. Di sini Anda bisa mengganti nama dan password.</p>
+                <button id="logout-btn" class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,37 +1,169 @@
+/* Import Font dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-:root { --bg-dark: #0d1117; --bg-secondary: #161b22; --primary-blue: #3b82f6; --hover-blue: #2563eb; --text-light: #e6edf3; --text-muted: #8b949e; --border-color: #30363d; }
+
+/* Variabel Warna Tema */
+:root {
+    --bg-dark: #0d1117;
+    --bg-secondary: #161b22;
+    --primary-blue: #3b82f6;
+    --hover-blue: #2563eb;
+    --text-light: #e6edf3;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+}
+
+/* Reset dan Gaya Dasar Body */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
-.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-/* --- Gaya yang diulang (Navbar, Tombol, Footer) --- */
-.navbar { padding: 20px 0; position: fixed; width: 100%; background-color: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; }
-.navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.navbar .logo { font-size: 24px; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
-.navbar .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
-.navbar .nav-links a:hover { color: var(--primary-blue); }
-.btn { padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; }
-.btn-primary { background-color: var(--primary-blue); color: white; }
-.btn-primary:hover { background-color: var(--hover-blue); }
-.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+/* --- Navbar --- */
+.navbar { 
+    padding: 15px 0; 
+    position: fixed; 
+    width: 100%; 
+    background-color: var(--bg-dark); /* Warna solid, bukan transparan */
+    border-bottom: 1px solid var(--border-color); 
+    z-index: 100; 
+}
+.navbar .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.navbar .logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--primary-blue); 
+    text-decoration: none; 
+}
 
-/* --- Gaya Khusus Halaman Dashboard --- */
-.dashboard-page { padding-top: 80px; } /* Memberi ruang di bawah navbar */
-.dashboard-header { background-color: var(--bg-secondary); padding: 50px 0; text-align: center; border-bottom: 1px solid var(--border-color); }
-.dashboard-header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-.dashboard-header p { font-size: 1.1rem; color: var(--text-muted); }
-.content-section { padding: 60px 0; }
-.content-section h2 { font-size: 2.2rem; margin-bottom: 40px; border-left: 4px solid var(--primary-blue); padding-left: 15px; }
+/* --- Navigasi Kiri (Logo & Links) --- */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Jarak antara logo dan menu */
+}
+.nav-links {
+    display: flex;
+    gap: 30px; /* Jarak antar menu */
+}
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+.nav-links a:hover {
+    color: var(--text-light);
+}
+.nav-links a.active {
+    color: var(--primary-blue);
+}
 
-/* Gaya Kartu Komik (mirip seperti di index.css) */
-.comic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; }
-.comic-card { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; }
-.comic-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-.comic-card img { width: 100%; height: auto; display: block; }
+/* --- Navigasi Kanan (Search & Profile) --- */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Kotak Pencarian --- */
+.search-container {
+    position: relative;
+}
+.search-container input {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    padding: 10px 15px;
+    width: 250px; /* Lebar kotak pencarian */
+    font-size: 0.9rem;
+    padding-right: 80px; /* Beri ruang untuk shortcut */
+}
+.search-container input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+.search-shortcut {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* --- Ikon Profil --- */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Main Content --- */
+main { padding-top: 80px; }
+
+/* --- Hero Banner --- */
+.hero-banner {
+    height: 50vh;
+    background: linear-gradient(to top, var(--bg-dark) 5%, transparent 50%), url('https://via.placeholder.com/1200x400/161b22/e6edf3?text=Hero+Banner') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+.hero-content { max-width: 50%; }
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero-meta { color: var(--text-muted); margin-bottom: 15px; }
+.hero-synopsis { font-size: 0.9rem; line-height: 1.6; color: var(--text-light); }
+
+/* --- Comic Section --- */
+.comic-section { padding: 40px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.section-header h2 { font-size: 1.8rem; }
+
+/* --- Tabs --- */
+.tabs .tab-btn {
+    background: none; border: 1px solid var(--border-color); color: var(--text-muted);
+    padding: 8px 16px; border-radius: 6px; margin-left: 10px; cursor: pointer;
+    font-family: 'Poppins', sans-serif; transition: all 0.3s ease;
+}
+.tabs .tab-btn:hover { background-color: var(--bg-secondary); color: var(--text-light); }
+.tabs .tab-btn.active { background-color: var(--primary-blue); color: white; border-color: var(--primary-blue); }
+
+/* --- Comic Carousel (Horizontal Scroll) --- */
+.comic-carousel {
+    display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px;
+    -ms-overflow-style: none; scrollbar-width: none;
+}
+.comic-carousel::-webkit-scrollbar { display: none; }
+.comic-carousel .comic-card { flex: 0 0 160px; }
+
+/* --- Comic Grid (Normal) --- */
+.comic-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px;
+}
+
+/* --- Comic Card --- */
+a.comic-card-link { text-decoration: none; color: inherit; }
+.comic-card { background-color: var(--bg-secondary); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; }
+.comic-card:hover { transform: translateY(-5px); }
+.comic-card img { width: 100%; height: 230px; object-fit: cover; display: block; }
 .comic-card-body { padding: 15px; }
-.comic-card-body h3 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.comic-card-body p { font-size: 0.8rem; color: var(--text-muted); }
+.comic-card-body h3 { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.comic-card-body p { font-size: 0.8rem; color: var(--text-muted); margin-top: 5px; }
 
-/* Gaya Progress Bar */
-.progress-bar { width: 100%; background-color: var(--border-color); height: 5px; }
-.progress { background-color: var(--primary-blue); height: 100%; border-radius: 0 2px 2px 0; }
+/* --- Footer --- */
+.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); margin-top: 40px; }

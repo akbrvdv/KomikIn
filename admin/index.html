@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Tambah Komik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tambah Komik Baru</h1>
+        <form id="add-comic-form">
+            <div class="form-group">
+                <label for="title">Judul Komik</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author">
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre (pisahkan dengan koma)</label>
+                <input type="text" id="genre" placeholder="Action, Fantasy, Romance">
+            </div>
+            <div class="form-group">
+                <label for="synopsis">Synopsis</label>
+                <textarea id="synopsis" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cover">Upload Gambar Cover</label>
+                <input type="file" id="cover" accept="image/*" required>
+            </div>
+            <button type="submit">Simpan Komik</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
