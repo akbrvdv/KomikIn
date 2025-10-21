@@ -1,0 +1,122 @@
+/* Import Font dan Variabel Warna (Sama seperti file CSS lain) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root { --bg-dark: #0d1117; --bg-secondary: #161b22; --primary-blue: #3b82f6; --hover-blue: #2563eb; --text-light: #e6edf3; --text-muted: #8b949e; --border-color: #30363d; }
+
+/* Reset dan Gaya Dasar Body */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* --- Gaya yang diulang (Navbar, Tombol, Footer) --- */
+.navbar { padding: 20px 0; position: fixed; width: 100%; background-color: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.navbar .logo { font-size: 24px; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
+.navbar .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
+.navbar .nav-links a:hover { color: var(--primary-blue); }
+.btn { padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; display: inline-block; }
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-primary:hover { background-color: var(--hover-blue); }
+.footer { padding: 20px 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+
+/* --- Gaya Khusus Halaman Detail Komik --- */
+.comic-detail-page {
+    padding-top: 120px; /* Jarak dari navbar */
+    padding-bottom: 60px;
+}
+
+.comic-header {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Kolom untuk sampul dan info */
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.comic-cover img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.comic-info h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.genre-tag {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.comic-meta {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.comic-meta p {
+    margin-bottom: 5px;
+}
+
+.synopsis {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-read {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.chapter-section {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.chapter-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.chapter-list {
+    list-style: none;
+}
+
+.chapter-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.chapter-list li:last-child {
+    border-bottom: none;
+}
+
+.chapter-list li:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.chapter-list li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.chapter-list li span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

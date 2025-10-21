@@ -19,7 +19,7 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); col
 .form-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 120px 20px 60px 20px; }
 .form-container { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 50px 40px; width: 100%; max-width: 420px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); }
 .form-container h2 { text-align: center; margin-bottom: 35px; font-size: 2.2rem; color: var(--text-light); }
-.form-group { margin-bottom: 25px; }
+.form-group { margin-bottom: 25px; position: relative; } /* Ditambahkan position: relative */
 .form-group label { display: block; margin-bottom: 10px; font-size: 0.95rem; font-weight: 600; color: var(--text-muted); }
 .form-group input { width: 100%; padding: 14px 15px; background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-light); font-size: 1.05rem; transition: border-color 0.3s, box-shadow 0.3s; }
 .form-group input:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); }
@@ -30,3 +30,15 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); col
 .form-footer { text-align: center; margin-top: 30px; font-size: 0.95rem; color: var(--text-muted); }
 .form-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
 .form-footer a:hover { text-decoration: underline; }
+
+/* --- Tambahan untuk Tombol Toggle Password --- */
+.toggle-password {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}

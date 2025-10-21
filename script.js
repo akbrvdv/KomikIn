@@ -59,6 +59,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 1000);
 
-    // Mulai efek ketik saat halaman dimuat
-    type();
+    // Mulai efek ketik jika elemennya ada
+    if (typedTextSpan) {
+        type();
+    }
+
+    // --- PENGATURAN TOGGLE PASSWORD ---
+    const passwordInput = document.getElementById('password');
+    const togglePasswordButton = document.getElementById('password-toggle-btn');
+
+    // Cek apakah elemen-elemen tersebut ada di halaman saat ini
+    if (passwordInput && togglePasswordButton) {
+        togglePasswordButton.addEventListener('click', function() {
+            // Toggle tipe atribut pada input password
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Ubah teks pada tombol
+            this.textContent = type === 'password' ? 'Show' : 'Hide';
+        });
+    }
+
 });
