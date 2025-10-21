@@ -76,8 +76,19 @@
             </div>
             
             <div id="tab-settings" class="tab-content">
+                
                 <h2>Pengaturan Akun</h2>
-                <p>Fitur ini akan segera tersedia. Di sini Anda bisa mengganti nama dan password.</p>
+                <form id="edit-profile-form" class="edit-profile-form">
+                    <div class="form-group">
+                        <label for="edit-username">Nama Pengguna</label>
+                        <input type="text" id="edit-username" required>
+                    </div>
+                    <button type="submit" class="btn-save-changes">Simpan Perubahan</button>
+                    <p id="success-message" class="success-message"></p>
+                </form>
+                
+                <hr class="divider">
+
                 <button id="logout-btn" class="btn-logout">Logout</button>
             </div>
         </div>

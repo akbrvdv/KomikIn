@@ -128,3 +128,58 @@ main.profile-page {
 .btn-logout:hover {
     background-color: #c82333;
 }
+
+/* -- Gaya untuk Form Edit Profil -- */
+.edit-profile-form {
+    max-width: 400px; /* Batasi lebar form */
+    margin-top: 20px;
+}
+
+.edit-profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.edit-profile-form label {
+    font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.edit-profile-form input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.btn-save-changes {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-save-changes:hover {
+    background-color: var(--hover-blue);
+}
+
+.success-message {
+    color: lightgreen;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 30px 0;
+}
